@@ -1,0 +1,16 @@
+graph "AVG" {
+   "AssignOp#1185828974" [shape="box"];
+   "AssignOp#1040108132" [shape="box"];
+   "AssignOp#1040108132" -- "StatefulOp#614691688" [style="dashed", dir="forward"];
+   "AddOp#63370617" -- "NumOp#2065554654" [id="0"];
+   "MulOp#1703916023" -- "StatefulOp#1022165816" [id="1"];
+   "MulOp#1703916023" -- "StatefulOp#614691688";
+   "AddOp#63370617" -- "MulOp#1703916023";
+   "DivOp#1819177159" -- "AddOp#63370617" [id="2"];
+   "AssignOp#1185828974" -- "StatefulOp#1022165816" [style="dashed", dir="forward"];
+   "AddOp#1579321858" -- "StatefulOp#1022165816" [id="3"];
+   "AddOp#1579321858" -- "NumOp#764590486";
+   "AssignOp#1185828974" -- "AddOp#1579321858";
+   "DivOp#1819177159" -- "AssignOp#1185828974";
+   "AssignOp#1040108132" -- "DivOp#1819177159";
+}
